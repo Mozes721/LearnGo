@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Person struct {
 	FirstName string
@@ -11,13 +13,13 @@ type Person struct {
 func (p Person) String() string {
 	return fmt.Sprintf("%s %s, age is %d", p.FirstName, p.LastName, p.Age)
 }
-
 func main() {
-	s := Person{
+	p := Person{
 		FirstName: "John",
 		LastName:  "Thomason",
 		Age:       29,
 	}
-	output := s.String()
+	output := p.String()
 	fmt.Println(output)
+	
 }
