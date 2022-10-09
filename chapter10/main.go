@@ -1,18 +1,16 @@
 package main
 
 import (
-	"chapter10/backpressure"
-	"chapter10/concurency"
-
-	"fmt"
+	"chapter10/waitgroup"
 )
 
 func main() {
 	//concurency.Loop_process()
-	for i := range concurency.CountTo(10) {
-		fmt.Println(i)
-	}
-	backpressure.Pressure()
+	//for i := range concurency.CountTo(10) {
+	//	fmt.Println(i)
+	//}
+	//backpressure.Pressure()
+	waitgroup.WaitGroup()
 }
 
 //ch1 := make(chan int)

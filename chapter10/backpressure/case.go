@@ -36,7 +36,7 @@ func TimeLimit() (int, error) {
 	case <- done:
 		return result, err
 	case <- time.After(2 * time.Second):
-		return 0, errors.New()
+		return 0, errors.New("work timed out")
 	}
 }
 
