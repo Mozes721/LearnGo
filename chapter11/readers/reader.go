@@ -13,6 +13,14 @@ type Writer interface {
 	Write(p []byte) (n int, err error)
 }
 
+type Closer interface {
+	Close() error
+}
+
+type Seeker interface {
+	Seek(offset int64, whence int) (int64, error)
+}
+
 func CountLetters(r io.Reader) (map[string]int, error) {
 	buf := make([]byte, 2048)
 	out := map[string]int{}
