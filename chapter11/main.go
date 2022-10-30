@@ -6,19 +6,21 @@ import (
 )
 
 func main() {
-	//	r, close, err := readers.BuildGZipReader("my_data.txt.gz")
-	//	if err != nil {
-	//		return
-	//	}
-	//	defer close()
-	//	counts, err := readers.CountLetters(r)
-	//	if err != nil {
-	//		return
-	//	}
-	//	fmt.Println(counts)
-	//}
-	fmt.Println(encodingJson.OrderMarshall())
+	fmt.Println(encodingJson.EncodingDecoding())
+
 }
+
+//	r, close, err := readers.BuildGZipReader("my_data.txt.gz")
+//	if err != nil {
+//		return
+//	}
+//	defer close()
+//	counts, err := readers.CountLetters(r)
+//	if err != nil {
+//		return
+//	}
+//	fmt.Println(counts)
+//}
 
 //s := "the quick brown fox jumped over the lazy dog"
 //sr := strings.NewReader(s)

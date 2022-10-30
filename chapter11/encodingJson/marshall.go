@@ -2,7 +2,7 @@ package encodingJson
 
 import (
 	"encoding/json"
-	"fmt"
+	"time"
 )
 
 type Order struct {
@@ -19,16 +19,14 @@ type Item struct {
 
 type Person struct {
 	Name string `json:"name"`
-	Age int `json:"age"`
+	Age  int    `json:"age"`
 }
 
-
-
-func PersonTo() string pers{
-	toFile := Person {
+func PersonTo() Person {
+	toFile := Person{
 		Name: "Fred",
-		Age: 40,
-	},
+		Age:  40,
+	}
 	return toFile
 
 }
@@ -36,7 +34,8 @@ func PersonTo() string pers{
 var o Order
 
 func OrderMarshall() error {
-	
+
+	data := "test order"
 	err := json.Unmarshal([]byte(data), &o)
 	if err != nil {
 		return err
